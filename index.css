@@ -1,0 +1,299 @@
+*, ::before, ::after, h1 {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --white: #FFFFFF;
+    --whitesmoke: whitesmoke;
+    --grey: #8B8B8B;
+    --lightgrey: #DEDEDE;
+    --light-black: #3C3C3C;
+    --hr-color: #D2D2D2;
+    --lightgreen: #16DB99;
+    --pale-green: #ECFDF5;
+    --msg-green: #065F46;
+}
+
+button {
+    background-color: var(--white);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    font-family: "Smythe", serif;
+}
+
+/* Header */
+
+header {
+    position: relative;
+    background-image: url(./images/books.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 35% 65%;
+    width: 100%;
+    height: 160px;
+    color: var(--whitesmoke);
+    padding: 40px;
+}
+
+header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+header * {
+    position: relative;
+    z-index: 2;
+}
+
+header h1, header h2 {
+    font-weight: 700;
+    text-shadow: 0px 0px 20px rgba(0, 0, 0, 1);
+}
+
+h1 {
+    font-size: 2.5rem;
+}
+
+h2 {
+    font-size: 1.4rem;
+}
+
+/* Main */
+
+main {
+    padding: 0x 0 0 0;
+}
+
+section {
+    padding: 30px 30px;
+}
+
+.offer-section {
+    padding: 30px 30px 30px 30px;
+    text-align: center;
+    background-color: #daeaf2;
+}
+
+.offer-header {
+    font-size: 2.3rem;
+    color: red;
+}
+.bold {
+    font-weight: 700;
+}
+
+.book-item-container {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+img {
+    width: 100px;
+    height: 160px;
+    
+}
+
+.book-item-info {
+    line-height: 1.7rem;
+}
+
+h3, .order-book-item, .total-price-line {
+    font-weight: 400;
+    font-size: 1.4rem;
+}
+
+.book-item-name {
+    font-size: 1.7rem;
+}
+
+.book-item-author {
+    color: var(--grey);
+    font-size: 1.2rem;
+}
+
+.book-item-desc {
+    color: #282828;
+    font-size: 1rem;
+    line-height: 1.09rem;
+}
+
+.book-item-price, .total-price {
+    font-size: 1.1rem;
+}
+
+.add-item-btn {
+    margin: 7px 0 0 auto;
+    border-radius: 50%;
+    padding: 0px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.4rem;
+    font-weight: 200;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    border: 1px solid var(--lightgrey);
+    color: var(--light-black);
+    flex-shrink: 0;
+}
+
+hr {
+    margin-top: 35px;
+    border: none;
+    border-bottom: 1px solid var(--hr-color);
+}
+
+/* Order */
+
+.order-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.order-header {
+   align-self: center;
+   margin-bottom: 6px;
+}
+
+.order-book-item-container {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.remove-btn {
+    border: none;
+    color: var(--hr-color);
+    font-size: 0.7rem;
+    cursor: pointer;
+}
+
+.order-divider {
+    margin-top: 8px;
+}
+
+.order-total-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.book-item-price {
+    margin: 0 0 0 auto;
+}
+
+.complete-order-btn {
+    margin-top: 30px;
+    background-color: var(--lightgreen);
+    color: var(--white);
+    border: 1px solid var(--lightgreen);
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+/* Payment Modal */
+
+.payment-modal {
+    background-color: white;
+    width: 80%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 200px rgba(0, 0, 0, 1);
+    border-radius: 2px;
+    display: none;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 25px 0;
+}
+
+input, .payment-btn {
+    padding: 15px;
+    width: 90%;
+}
+
+input {
+    width: 90%;
+}
+
+.payment-btn {
+    cursor: pointer;
+    border-radius: 2px;
+    background-color: var(--lightgreen);
+    color: var(--white);
+    border: 1px solid var(--lightgreen);
+}
+
+.order-placed-msg, .rating-message {
+    background-color: var(--pale-green);
+    color: var(--msg-green);
+    text-align: center;
+    padding: 35px 0;
+    font-size: 1.4rem;
+    border-radius: 2px;
+}
+
+#thanks-section {
+    padding-top: 40px;
+    padding-bottom: 5px;
+}
+
+#last-section {
+    padding-top: 0;
+}
+
+.rating-message {
+    padding: 20px 0;
+}
+
+.rating-stars {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    gap: 5px;
+    cursor: pointer;
+}
+
+/* utility */
+
+.hidden {
+    display: none;
+}
+
+.green-color {
+    color: green;
+}
+
+.red-color {
+    color: red;
+}
+.block {
+    display: block;
+}
+
+.underline {
+    text-decoration: underline;
+}
+
+.fa-solid {
+    color: #ebcc1e;
+}
+

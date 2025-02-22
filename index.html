@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Responsive Page</title>
+        <link rel="stylesheet" href="index.css">
+        <!--Smythe Font-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    </head>
+    <body>
+        <header>
+            <h1>The Book Nook</h1>
+            <h2>For curious minds and wandering souls</h2>
+        </header>
+        <main></main>
+        <div class="payment-modal" id="payment-modal">
+            <form id="form">
+                <h3>Enter card details</h3>
+                <input 
+                    type="text" 
+                    id="name" 
+                    name="name" 
+                    placeholder="Enter your name"
+                    aria-label="Name"
+                    required
+                >
+                <input 
+                    type="tel" 
+                    id="card-number" 
+                    name="card-number" 
+                    placeholder="Enter card number" 
+                    pattern="\d{4} \d{4} \d{4} \d{4}" 
+                    aria-label="Credit Card Number"
+                    required
+                >
+                <input 
+                    type="password" 
+                    id="cvv" 
+                    name="cvv" 
+                    placeholder="Enter CVV"
+                    maxlength="3" 
+                    aria-label="CVV"
+                    required
+                >
+                <button role="button" class="payment-btn">Pay</button>
+            </form>
+        </div>
+        <script src="index.js" type="module"></script>
+    </body>
+</html>
+
