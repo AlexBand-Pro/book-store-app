@@ -149,6 +149,10 @@ h3, .order-book-item, .total-price-line {
     flex-shrink: 0;
 }
 
+.add-item-btn:active {
+    color: var(--msg-green);
+}
+
 hr {
     margin-top: 35px;
     border: none;
